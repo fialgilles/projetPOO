@@ -3,6 +3,7 @@
 
 #include "joueurs.h"
 #include "paquet.hpp"
+#include "utile.h"
 #include <iostream>
 
 using namespace std;
@@ -18,5 +19,6 @@ public:
   Table();
   ~Table();
   int getNbrJ() const;
+  void partie();
 };
 #endif

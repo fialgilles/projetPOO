@@ -4,6 +4,6 @@
 #include <string>
 #include <iostream>
 
-void affiche(const std::string etape);
+void affiche(const int&);
 
 #endif

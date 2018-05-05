@@ -11,6 +11,6 @@ int main()
 {
   srand(time(NULL));
   Table t;
-  affiche("PREFLOP");
+  t.partie();
   return 0;
 }

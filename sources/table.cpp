@@ -31,6 +31,11 @@ Table::Table()
   }
 }
 
+void Table::partie()
+{
+  
+}
+
 int Table::getNbrJ() const
 {
   return _nbrJ;
