@@ -10,11 +10,13 @@ using namespace std;
 class Table
 {
 private:
-  Cartes _board[5];
-  Paquet<Cartes> _deck;
-  Joueurs *_nbJ;
+  Cartes _board[5]; // Board d'une table
+  Paquet<Cartes> _deck; // Paquet de 52 cartes
+  Joueurs *_nbJ; // Pointeurs contenant les joueurs d'une parties
+  int _nbrJ; // Nombres des joueurs d'une partie
 public:
   Table();
   ~Table();
+  int getNbrJ() const;
 };
 #endif

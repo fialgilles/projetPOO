@@ -4,8 +4,8 @@ using namespace std;
 
 Cartes::Cartes()
 {
-  this->_couleur = 10;
-  this->_hauteur = 10;
+  this->_couleur = 0;
+  this->_hauteur = 0;
 }
 
 Cartes::Cartes(int coul,int haut):_couleur(coul),_hauteur(haut){}

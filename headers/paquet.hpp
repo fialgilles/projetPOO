@@ -46,7 +46,6 @@ Paquet<T>::Paquet()
       haut = 1;
     _paquet[i].setCoul(coul);
     _paquet[i].setHauteur(haut);
-    //cout<<"i :"<<i<<" "<<_paquet[i]<<endl;
     haut++;
     _piocher[i] = false;
   }
