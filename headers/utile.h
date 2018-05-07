@@ -5,5 +5,6 @@
 #include <iostream>
 
 void affiche(const int&);
+void quickSort();
 
 #endif

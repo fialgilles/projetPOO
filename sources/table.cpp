@@ -2,6 +2,8 @@
 
 Table::Table()
 {
+  for(int i=0;i<5;i++)
+    _board[i] = _deck.pioche();
   do
   {
     try
@@ -35,67 +37,89 @@ void Table::partie()
 {
   bool fin = false;
   int tour = 0;
-  tour = 1;
   while((!fin)&&(tour <=4))
   {
     tour++;
     affiche(tour);
-    this->combinaison();
+    //cout<<_nbJ[0]<<"\n";
+    this->combinaison(_nbJ[0]);
   }
 }
 
-void Table::combinaison()
+int Table::getNbCBoard() const
 {
+  int j;
+  for(j = 0;j<5;j++)
+  {
+    if((_board[j].getHauteur()) == -1)
+    {
+      break;
+    }
+  }
+  return j;
+}
+
+void Table::combinaison(const Joueurs &j)
+{
+  Cartes tab[7];
+  int nb = this->getNbCBoard();
+  for(int i=0;i<7;i++)
+  {
+    tab[i].setHauteur(j._main[i].getHauteur());
+    tab[i].setCoul(j._main[i].getCoul());
+  }
+  for(int i=0;i<2;i++)
+    cout<<tab[i]<<endl;
 
 }
 
 bool Table::estQFlushRoyal()
 {
-
+  return false;
 }
 
 bool Table::estQFlush()
 {
-
+return false;
 }
 
 bool Table::estCarre()
 {
-
+return false;
 }
 
 bool Table::estFullHouse()
 {
-
+return false;
 }
 
 bool Table::estCouleur()
 {
-
+return false;
 }
 
 bool Table::estQuinte()
 {
-
-
+return false;
 }
 bool Table::estBrelan()
 {
-
+return false;
 }
 
 bool Table::estDoublePaire()
 {
-
+return false;
 }
 
 bool Table::estPaire()
 {
-
+return false;
 }
 
 bool Table::estHauteur()
 {
+  return false;
 
 }
 

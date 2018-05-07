@@ -15,12 +15,13 @@ private:
   Paquet<Cartes> _deck; // Paquet de 52 cartes
   Joueurs *_nbJ; // Pointeurs contenant les joueurs d'une parties
   int _nbrJ; // Nombres des joueurs d'une partie
+  int getNbCBoard() const; // retourne le nombre de carte du board
 public:
   Table();
   ~Table();
   int getNbrJ() const;
   void partie();
-  void combinaison();
+  void combinaison(const Joueurs &j);
   bool estQFlushRoyal();
   bool estQFlush();
   bool estCarre();
