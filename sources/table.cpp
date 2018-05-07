@@ -44,6 +44,11 @@ void Table::partie()
   }
 }
 
+void Table::combinaison()
+{
+
+}
+
 int Table::getNbrJ() const
 {
   return _nbrJ;
