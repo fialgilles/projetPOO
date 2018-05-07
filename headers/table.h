@@ -21,5 +21,15 @@ public:
   int getNbrJ() const;
   void partie();
   void combinaison();
+  bool estQFlushRoyal();
+  bool estQFlush();
+  bool estCarre();
+  bool estFullHouse();
+  bool estCouleur();
+  bool estQuinte();
+  bool estBrelan();
+  bool estDoublePaire();
+  bool estPaire();
+  bool estHauteur();
 };
 #endif

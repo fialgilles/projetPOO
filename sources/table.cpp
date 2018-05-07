@@ -49,6 +49,56 @@ void Table::combinaison()
 
 }
 
+bool Table::estQFlushRoyal()
+{
+
+}
+
+bool Table::estQFlush()
+{
+
+}
+
+bool Table::estCarre()
+{
+
+}
+
+bool Table::estFullHouse()
+{
+
+}
+
+bool Table::estCouleur()
+{
+
+}
+
+bool Table::estQuinte()
+{
+
+
+}
+bool Table::estBrelan()
+{
+
+}
+
+bool Table::estDoublePaire()
+{
+
+}
+
+bool Table::estPaire()
+{
+
+}
+
+bool Table::estHauteur()
+{
+
+}
+
 int Table::getNbrJ() const
 {
   return _nbrJ;
