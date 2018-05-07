@@ -33,7 +33,15 @@ Table::Table()
 
 void Table::partie()
 {
-  
+  bool fin = false;
+  int tour = 0;
+  tour = 1;
+  while((!fin)&&(tour <=4))
+  {
+    tour++;
+    affiche(tour);
+    this->combinaison();
+  }
 }
 
 int Table::getNbrJ() const

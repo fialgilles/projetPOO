@@ -4,22 +4,21 @@ using namespace std;
 
 void affiche(const int &tour)
 {
-  cout<<"=============================\n\t";
+  cout<<"";
   switch(tour)
   {
     case 1:
-      cout<<"PREFLOP";
+      cout<<"=============================\n\tPREFLOP\n=============================\n";
       break;
     case 2:
-      cout<<"FLOP";
+      cout<<"=============================\n\tFLOP\n=============================\n";
       break;
     case 3:
-      cout<<"TURN";
+      cout<<"=============================\n\tTURN\n=============================\n";
       break;
     case 4:
-      cout<<"RIVER";
+      cout<<"=============================\n\tsRIVER\n=============================\n";
       break;
     default: exit(-1);
   }
-  cout<<"\n=============================\n"<<endl;
 }

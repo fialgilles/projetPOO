@@ -20,5 +20,6 @@ public:
   ~Table();
   int getNbrJ() const;
   void partie();
+  void combinaison();
 };
 #endif
