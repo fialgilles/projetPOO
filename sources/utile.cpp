@@ -23,7 +23,7 @@ void affiche(const int &tour)
   }
 }
 
-void trieJoueur(Cartes *tab,int nb)
+void sort(Cartes *tab,int nb)
 {
   Cartes aux;
   for(int i = nb;i>=0;i--)

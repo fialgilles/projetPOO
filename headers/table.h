@@ -29,8 +29,8 @@ public:
   bool estCouleur();
   bool estQuinte();
   bool estBrelan();
-  bool estDoublePaire();
-  bool estPaire();
+  bool estDoublePaire(const Cartes *tab,int nb);
+  bool estPaire(const Cartes *tab,int nb);
   bool estHauteur();
 };
 #endif

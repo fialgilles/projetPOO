@@ -6,6 +6,6 @@
 #include <iostream>
 
 void affiche(const int&);
-void trieJoueur(Cartes *tab,int nb);
+void sort(Cartes *tab,int nb);
 
 #endif

@@ -37,13 +37,13 @@ void Table::partie()
 {
   bool fin = false;
   int tour = 0;
-  while((!fin)&&(tour <=4))
+  this->combinaison(_nbJ[0]);
+  /*while((!fin)&&(tour <=4))
   {
     tour++;
     affiche(tour);
     //cout<<_nbJ[0]<<"\n";
-    this->combinaison(_nbJ[0]);
-  }
+  }*/
 }
 
 int Table::getNbCBoard() const
@@ -61,14 +61,32 @@ int Table::getNbCBoard() const
 
 void Table::combinaison(const Joueurs &j)
 {
-  Cartes tab[7];
-  int nb = this->getNbCBoard();
+  /*
   int i;
   for(i=0;i<2;i++)
     tab[i]=j._main[i];
   for(int i=0;i<nb;i++)
     tab[i+2]=_board[i];
-  trieJoueur(tab,2+nb);
+  */
+  int nb = this->getNbCBoard();
+  Cartes tab[7];
+  tab[0].setCoul(0);
+  tab[0].setHauteur(1);
+  tab[1].setCoul(0);
+  tab[1].setHauteur(1);
+  tab[2].setCoul(0);
+  tab[2].setHauteur(2);
+  tab[3].setCoul(0);
+  tab[3].setHauteur(5);
+  tab[4].setCoul(0);
+  tab[4].setHauteur(6);
+  tab[5].setCoul(0);
+  tab[5].setHauteur(3);
+  tab[6].setCoul(0);
+  tab[6].setHauteur(8);
+  sort(tab,2+nb);
+  //cout<<this->estPaire(tab,2+nb)<<endl;
+  cout<<this->estDoublePaire(tab,2+nb)<<" huehuehuh hj "<<endl;
 
 }
 
@@ -106,14 +124,57 @@ bool Table::estBrelan()
 return false;
 }
 
-bool Table::estDoublePaire()
+bool Table::estDoublePaire(const Cartes *tab,int nb)
 {
-return false;
+  int p1=0;
+  int k=0;
+  for(k=0;k<nb;k++)
+  {
+    if(tab[k].getHauteur() == tab[k+1].getHauteur())
+    {
+      cout<<"Paire1"<<endl;
+      p1+=1;
+      break;
+    }
+  }
+  cout<<"p1 : "<<p1<<endl;
+  if(p1==0)
+  {
+    cout<<"pas de double paire"<<endl;
+    return false;
+  }
+  for(int j=k+2;j<nb;j++)
+  {
+    if(tab[j].getHauteur() == tab[j+1].getHauteur())
+    {
+      cout<<"Paire2"<<endl;
+      p1+=1;
+      break;
+    }
+  }
+  if (p1==2)
+  {
+    cout<<"double paire\n";
+    return true;
+  }
+  else
+  {
+    cout<<"pas de double paire"<<endl;
+    return false;
+  }
 }
 
-bool Table::estPaire()
+bool Table::estPaire(const Cartes *tab,int nb)
 {
-return false;
+  for(int i=0;i<nb;i++)
+  {
+    if(tab[i].getHauteur() == tab[i+1].getHauteur())
+    {
+      cout<<"Paire"<<endl;
+      return true;
+    }
+  }
+  return false;
 }
 
 bool Table::estHauteur()
