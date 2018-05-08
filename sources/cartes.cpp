@@ -4,7 +4,7 @@ using namespace std;
 
 Cartes::Cartes()
 {
-  this->_couleur = 0;
+  this->_couleur = -1;
   this->_hauteur = -1;
 }
 
@@ -60,6 +60,8 @@ std::ostream& operator<<(std::ostream &os, const Cartes &c)
       cout<<"Roi";
     if(c.getHauteur() == 1)
       cout<<"As";
+      if(c.getHauteur() == -1)
+        cout<<"DEBUG";
 
     if(c.getCoul() == 0)
       cout<<" de_trefle";
@@ -69,9 +71,13 @@ std::ostream& operator<<(std::ostream &os, const Cartes &c)
       cout<<" de_coeur";
     if(c.getCoul() == 3)
       cout<<" de_pique";
+    if(c.getCoul() == -1)
+      cout<<"DEBUG";
   }
   else
   {
+    if(c.getCoul() == -1)
+      cout<<"DEBUG";
     if(c.getCoul() == 0)
       cout<<c.getHauteur()<<" de_trefle";
     if(c.getCoul() == 1)

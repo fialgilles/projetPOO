@@ -63,13 +63,14 @@ void Table::combinaison(const Joueurs &j)
 {
   Cartes tab[7];
   int nb = this->getNbCBoard();
-  for(int i=0;i<7;i++)
-  {
-    tab[i].setHauteur(j._main[i].getHauteur());
-    tab[i].setCoul(j._main[i].getCoul());
-  }
-  for(int i=0;i<2;i++)
-    cout<<tab[i]<<endl;
+  int i;
+  for(i=0;i<2;i++)
+    tab[i]=j._main[i];
+  for(int i=0;i<nb;i++)
+    tab[i+2]=_board[i];
+
+  for(int j=0;j<7;j++)
+    cout<<tab[j]<<endl;
 
 }
 
