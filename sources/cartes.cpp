@@ -33,9 +33,19 @@ void Cartes::setHauteur(int val)
   this->_hauteur = val;
 }
 
+bool Cartes::operator>(const Cartes &c1)
+{
+  return (this->getHauteur() > c1.getHauteur()) ? true : false;
+}
+
 bool Cartes::operator==(const Cartes &c)
 {
   return this->getHauteur() == c.getHauteur();
+}
+
+Cartes& Cartes::operator[](const int &i)
+{
+  return (*this)[i];
 }
 
 Cartes& Cartes::operator=(const Cartes &c)

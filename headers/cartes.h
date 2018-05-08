@@ -20,8 +20,10 @@ public:
   void setCoul(int val);
   void setHauteur(int val);
   // Les OPERATEURS
+  Cartes& operator[](const int &i);
   bool operator==(const Cartes &c);
   Cartes& operator=(const Cartes &c);
+  bool operator>(const Cartes &c1);
 };
 std::ostream& operator<<(std::ostream &os, const Cartes &c);
 #endif

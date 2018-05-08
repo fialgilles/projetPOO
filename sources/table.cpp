@@ -68,9 +68,7 @@ void Table::combinaison(const Joueurs &j)
     tab[i]=j._main[i];
   for(int i=0;i<nb;i++)
     tab[i+2]=_board[i];
-
-  for(int j=0;j<7;j++)
-    cout<<tab[j]<<endl;
+  trieJoueur(tab,2+nb);
 
 }
 

@@ -22,3 +22,20 @@ void affiche(const int &tour)
     default: exit(-1);
   }
 }
+
+void trieJoueur(Cartes *tab,int nb)
+{
+  Cartes aux;
+  for(int i = nb;i>=0;i--)
+  {
+    for(int j=0;j<i;j++)
+    {
+      if(tab[j]>tab[j+1])
+      {
+        aux = tab[j];
+        tab[j]=tab[j+1];
+        tab[j+1]=aux;
+      }
+    }
+  }
+}
