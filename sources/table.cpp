@@ -35,8 +35,8 @@ Table::Table()
 
 void Table::partie()
 {
-  bool fin = false;
-  int tour = 0;
+  //bool fin = false;
+  //int tour = 0;
   this->combinaison(_nbJ[0]);
   /*while((!fin)&&(tour <=4))
   {
@@ -71,23 +71,22 @@ void Table::combinaison(const Joueurs &j)
   int nb = this->getNbCBoard();
   Cartes tab[7];
   tab[0].setCoul(0);
-  tab[0].setHauteur(1);
+  tab[0].setHauteur(13);
   tab[1].setCoul(0);
-  tab[1].setHauteur(1);
+  tab[1].setHauteur(5);
   tab[2].setCoul(0);
-  tab[2].setHauteur(2);
+  tab[2].setHauteur(12);
   tab[3].setCoul(0);
-  tab[3].setHauteur(5);
+  tab[3].setHauteur(2);
   tab[4].setCoul(0);
-  tab[4].setHauteur(6);
+  tab[4].setHauteur(1);
   tab[5].setCoul(0);
   tab[5].setHauteur(3);
   tab[6].setCoul(0);
-  tab[6].setHauteur(8);
+  tab[6].setHauteur(4);
   sort(tab,2+nb);
-  //cout<<this->estPaire(tab,2+nb)<<endl;
-  cout<<this->estDoublePaire(tab,2+nb)<<" huehuehuh hj "<<endl;
-
+  for(int i=0;i<7;i++)
+    cout<<"i : "<<i<<" "<<tab[i]<<endl;
 }
 
 bool Table::estQFlushRoyal()

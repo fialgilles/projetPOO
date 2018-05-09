@@ -25,17 +25,19 @@ void affiche(const int &tour)
 
 void sort(Cartes *tab,int nb)
 {
-  Cartes aux;
-  for(int i = nb;i>=0;i--)
+  bool tab_en_ordre = false;
+  int taille = nb;
+  while(!tab_en_ordre)
   {
-    for(int j=0;j<i;j++)
+    tab_en_ordre = true;
+    for(int i=0;i<nb-1;i++)
     {
-      if(tab[j]>tab[j+1])
+      if(tab[i]>tab[i+1])
       {
-        aux = tab[j];
-        tab[j]=tab[j+1];
-        tab[j+1]=aux;
+        swap(tab[i],tab[i+1]);
+        tab_en_ordre = false;
       }
     }
+    taille--;
   }
 }

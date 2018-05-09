@@ -10,7 +10,10 @@ Cartes::Cartes()
 
 Cartes::Cartes(int coul,int haut):_couleur(coul),_hauteur(haut){}
 
-Cartes::~Cartes(){}
+Cartes::~Cartes()
+{
+
+}
 
 
 int Cartes::getCoul() const
@@ -23,12 +26,12 @@ int Cartes::getHauteur() const
   return _hauteur;
 }
 
-void Cartes::setCoul(int val)
+void Cartes::setCoul(const int val)
 {
   this->_couleur = val;
 }
 
-void Cartes::setHauteur(int val)
+void Cartes::setHauteur(const int val)
 {
   this->_hauteur = val;
 }

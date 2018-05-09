@@ -52,7 +52,10 @@ Paquet<T>::Paquet()
 }
 
 template<class T>
-Paquet<T>::~Paquet(){}
+Paquet<T>::~Paquet()
+{
+
+}
 
 template<class T>
 bool Paquet<T>::estPiocher(const int &i)

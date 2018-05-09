@@ -17,8 +17,8 @@ public:
   int getCoul() const;
   int getHauteur() const;
   // Les SETTERS
-  void setCoul(int val);
-  void setHauteur(int val);
+  void setCoul(const int val);
+  void setHauteur(const int val);
   // Les OPERATEURS
   Cartes& operator[](const int &i);
   bool operator==(const Cartes &c);

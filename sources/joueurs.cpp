@@ -7,7 +7,7 @@ Joueurs::Joueurs()
 
 Joueurs::~Joueurs()
 {
-
+  
 }
 
 void Joueurs::setNum(const int &val)

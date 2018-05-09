@@ -12,5 +12,6 @@ int main()
   srand(time(NULL));
   Table t;
   t.partie();
+  cout<<"sortie programme"<<endl;
   return 0;
 }
